@@ -221,3 +221,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------- 本项目追加
+# Agent 本地状态（项目记忆、会话缓存）
+.workbuddy/
+
+# LaTeX 中间产物（main.pdf / main.bbl 保留）
+*.aux
+*.log
+*.out
+*.xdv
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+missfont.log
+
+# 页面渲染自检截图
+PAPER_论文/*/p*.png
+PAPER_论文/*/q-*.png
+PAPER_论文/*/r-*.png

@@ -1,0 +1,114 @@
+[
+  {
+    "key": "torrieri1984",
+    "doi": "10.1109/taes.1984.310439",
+    "title": "Statistical Theory of Passive Location Systems",
+    "venue": "IEEE Transactions on Aerospace and Electronic Systems",
+    "year": 1984,
+    "type": "journal-article"
+  },
+  {
+    "key": "dijkstra1959",
+    "doi": "10.1007/bf01386390",
+    "title": "A note on two problems in connexion with graphs",
+    "venue": "Numerische Mathematik",
+    "year": 1959,
+    "type": "journal-article"
+  },
+  {
+    "key": "lozano1979",
+    "doi": "10.1109/tse.1979.234169",
+    "title": "Designing Software for Ease of Extension and Contraction",
+    "venue": "IEEE Transactions on Software Engineering",
+    "year": 1979,
+    "type": "journal-article"
+  },
+  {
+    "key": "storn1997",
+    "doi": "10.1023/a:1008202821328",
+    "title": "Differential Evolution – A Simple and Efficient Heuristic for global Optimization over Continuous Spaces",
+    "venue": "Journal of Global Optimization",
+    "year": 1997,
+    "type": "journal-article"
+  },
+  {
+    "key": "nelder1965",
+    "doi": "10.1093/comjnl/7.4.308",
+    "title": "A Simplex Method for Function Minimization",
+    "venue": "The Computer Journal",
+    "year": 1965,
+    "type": "journal-article"
+  },
+  {
+    "key": "gavish1992",
+    "doi": "10.2514/6.1987-2382",
+    "title": "On the observability of target maneuvers via bearing-only and bearing-rate-only measurements",
+    "venue": "Guidance, Navigation and Control Conference",
+    "year": 1987,
+    "type": "proceedings-article"
+  },
+  {
+    "key": "aoa_localization",
+    "doi": "10.1109/lwc.2015.2415788",
+    "title": "Accuracy Analysis of the Two-Reference-Node Angle-of-Arrival Localization System",
+    "venue": "IEEE Wireless Communications Letters",
+    "year": 2015,
+    "type": "journal-article"
+  },
+  {
+    "key": "uav_cooperative",
+    "doi": "10.1109/icuas.2013.6564765",
+    "title": "Cooperative localization based on the azimuth angles among multiple UAVs",
+    "venue": "2013 International Conference on Unmanned Aircraft Systems (ICUAS)",
+    "year": 2013,
+    "type": "proceedings-article"
+  },
+  {
+    "key": "ptz_tracking",
+    "doi": "10.1109/dicta.2009.84",
+    "title": "Real Time Target Tracking with Pan Tilt Zoom Camera",
+    "venue": "2009 Digital Image Computing: Techniques and Applications",
+    "year": 2009,
+    "type": "proceedings-article"
+  },
+  {
+    "key": "gdop",
+    "doi": "10.1002/9780470747988.ch9",
+    "title": "Geometric Dilution of Precision Analysis",
+    "venue": "Ground‐Based Wireless Positioning",
+    "year": 2009,
+    "type": "other"
+  },
+  {
+    "key": "mcmc_sampling",
+    "doi": "10.1007/978-3-642-56046-0_9",
+    "title": "Efficient Monte Carlo Simulation Methods in Statistical Physics",
+    "venue": "Monte Carlo and Quasi-Monte Carlo Methods 2000",
+    "year": 2002,
+    "type": "book-chapter"
+  },
+  {
+    "key": "evidential",
+    "doi": "10.32469/10355/9011",
+    "title": "Target geolocation from airborne video without terrain data",
+    "venue": "",
+    "year": null,
+    "type": "dissertation"
+  },
+  {
+    "key": "uav_vision",
+    "doi": "10.2514/6.2008-6667",
+    "title": "Vision-Based UAV Navigation",
+    "venue": "AIAA Guidance, Navigation and Control Conference and Exhibit",
+    "year": 2008,
+    "type": "proceedings-article"
+  },
+  {
+    "key": "visibility",
+    "doi": "10.1145/73393.73411",
+    "title": "Efficient algorithms for Euclidean shortest path and visibility problems with polygonal obstacles",
+    "venue": "Proceedings of the fourth annual symposium on Computational geometry  - SCG '88",
+    "year": 1988,
+    "type": "proceedings-article"
+  }
+]

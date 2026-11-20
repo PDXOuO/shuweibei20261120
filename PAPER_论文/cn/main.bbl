@@ -1,0 +1,103 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\doi{\begingroup \urlstyle{same}\Url}
+  \def\cstr{\begingroup \urlstyle{same}\Url}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \def\cstr#1{\href{https://cstr.cn/#1}{\nolinkurl{#1}}}
+\fi
+
+\bibitem[Torrieri(1984)]{torrieri1984}
+Torrieri D.
+\newblock {Statistical Theory of Passive Location Systems}\allowbreak[J/OL].
+\newblock IEEE Transactions on Aerospace and Electronic
+  Systems，1984，AES-20\allowbreak （2）：183-198.
+\newblock DOI:\doi{10.1109/TAES.1984.310439}.
+
+\bibitem[Qu et~al.(2013)Qu，Wu，and Zhang]{qu2013coop}
+Qu Yaohong，Wu Jizhi，Zhang Youmin.
+\newblock {Cooperative Localization Based on the Azimuth Angles among Multiple
+  UAVs}\allowbreak[C/OL]//\allowbreak
+2013 international conference on unmanned aircraft systems（ICUAS）.
+\newblock 2013：818-823.
+\newblock DOI:\doi{10.1109/ICUAS.2013.6564765}.
+
+\bibitem[Hepner et~al.(1987)Hepner and Geering]{hepner1987}
+Hepner S，Geering H.
+\newblock {On the Observability of Target Maneuvers via Bearing-Only and
+  Bearing-Rate-Only Measurements}\allowbreak[C/OL]//\allowbreak
+Guidance，navigation and control conference.
+\newblock 1987.
+\newblock DOI:\doi{10.2514/6.1987-2382}.
+
+\bibitem[Lozano-P{\'e}rez et~al.(1979)Lozano-P{\'e}rez and Wesley]{lozano1979}
+Lozano-P{\'e}rez T，Wesley M~A.
+\newblock {An Algorithm for Planning Collision-Free Paths among Polyhedral
+  Obstacles}\allowbreak[J/OL].
+\newblock Communications of the ACM，1979，22\allowbreak （10）：560-570.
+\newblock DOI:\doi{10.1145/359156.359164}.
+
+\bibitem[Kapoor et~al.(1988)Kapoor and Maheshwari]{kapoor1988vis}
+Kapoor S，Maheshwari S~N.
+\newblock {Efficient Algorithms for Euclidean Shortest Path and Visibility
+  Problems with Polygonal Obstacles}\allowbreak[C/OL]//\allowbreak
+Proceedings of the fourth annual symposium on computational geometry（SCG
+  '88）.
+\newblock 1988：172-182.
+\newblock DOI:\doi{10.1145/73393.73411}.
+
+\bibitem[Dijkstra(1959)]{dijkstra1959}
+Dijkstra E~W.
+\newblock {A Note on Two Problems in Connexion with Graphs}\allowbreak[J/OL].
+\newblock Numerische Mathematik，1959，1\allowbreak （1）：269-271.
+\newblock DOI:\doi{10.1007/BF01386390}.
+
+\bibitem[Kumar et~al.(2009)Kumar，Dick，and Sheng]{kumar2009ptz}
+Kumar P，Dick A，Sheng T~S.
+\newblock {Real Time Target Tracking with Pan Tilt Zoom
+  Camera}\allowbreak[C/OL]//\allowbreak
+2009 digital image computing：techniques and applications.
+\newblock 2009：492-497.
+\newblock DOI:\doi{10.1109/DICTA.2009.84}.
+
+\bibitem[Sasiadek et~al.(2008)Sasiadek and Walker]{sasiadek2008vision}
+Sasiadek J，Walker M.
+\newblock {Vision-Based UAV Navigation}\allowbreak[C/OL]//\allowbreak
+AIAA guidance，navigation and control conference and exhibit.
+\newblock 2008.
+\newblock DOI:\doi{10.2514/6.2008-6667}.
+
+\bibitem[He et~al.(2015)He，Behnad，and Wang]{he2015aoa}
+He Yu，Behnad A，Wang Xianbin.
+\newblock {Accuracy Analysis of the Two-Reference-Node Angle-of-Arrival
+  Localization System}\allowbreak[J/OL].
+\newblock IEEE Wireless Communications Letters，2015，4\allowbreak
+  （3）：329-332.
+\newblock DOI:\doi{10.1109/LWC.2015.2415788}.
+
+\bibitem[Storn et~al.(1997)Storn and Price]{storn1997}
+Storn R，Price K.
+\newblock {Differential Evolution --- A Simple and Efficient Heuristic for
+  Global Optimization over Continuous Spaces}\allowbreak[J/OL].
+\newblock Journal of Global Optimization，1997，11\allowbreak
+  （4）：341-359.
+\newblock DOI:\doi{10.1023/A:1008202821328}.
+
+\bibitem[Nelder et~al.(1965)Nelder and Mead]{nelder1965}
+Nelder J~A，Mead R.
+\newblock {A Simplex Method for Function Minimization}\allowbreak[J/OL].
+\newblock The Computer Journal，1965，7\allowbreak （4）：308-313.
+\newblock DOI:\doi{10.1093/comjnl/7.4.308}.
+
+\bibitem[Robert et~al.(2004)Robert and Casella]{robert2004mc}
+Robert C~P，Casella G.
+\newblock {Monte Carlo Statistical Methods}\allowbreak[M/OL].
+\newblock 2nd ed.
+\newblock New York：Springer，2004.
+\newblock DOI:\doi{10.1007/978-1-4757-4145-2}.
+
+\end{thebibliography}
