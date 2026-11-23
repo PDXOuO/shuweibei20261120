@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import os
 import re
+import sys
 
 from docx import Document
 from docx.enum.section import WD_SECTION
@@ -95,7 +96,7 @@ def body_par(doc, spacing=1.5, first_indent=None):
     return p
 
 
-def build():
+def build(dst=None):
     doc = Document()
     sec = doc.sections[0]
     sec.page_height, sec.page_width = Cm(29.7), Cm(21.0)
@@ -245,10 +246,11 @@ def build():
     fld.set(qn("w:instr"), "PAGE")
     footer._p.append(fld)
 
-    doc.save(DST)
-    return DST
+    dst = dst or DST
+    doc.save(dst)
+    return dst
 
 
 if __name__ == "__main__":
-    path = build()
+    path = build(sys.argv[1] if len(sys.argv) > 1 else None)
     print("写出:", path, os.path.getsize(path), "bytes")
