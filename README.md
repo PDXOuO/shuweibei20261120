@@ -25,12 +25,27 @@
 
 | 语言 | 文件 | 版式 | 篇幅 |
 |---|---|---|---|
-| 中文 | [`PAPER_论文/cn/main.pdf`](PAPER_论文/cn/main.pdf) | 国赛 CUMCM（ctexart，GB/T 7714-2015，摘要单独成页） | 25 页，9 图 8 表 |
-| 英文 | [`PAPER_论文/en/main.pdf`](PAPER_论文/en/main.pdf) | MCM/ICM（Times New Roman，1 inch 边距，Summary 单独成页） | 24 页，7 图 6 表 |
+| 中文 | [`PAPER_论文/cn/main.pdf`](PAPER_论文/cn/main.pdf) | 国赛 CUMCM（ctexart，GB/T 7714-2015，摘要单独成页） | 26 页，9 图 9 表（含附录 C 报告表） |
+| 英文 | [`PAPER_论文/en/main.pdf`](PAPER_论文/en/main.pdf) | MCM/ICM（Times New Roman，1 inch 边距，Summary 单独成页） | 25 页，7 图 7 表（含附录 C 报告表） |
 
 两篇论文的数字全部取自各分题 `output/*.json`；12 条参考文献经 Crossref 逐条核验 DOI；
 英文论文的插图另用 `PAPER_论文/code/make_en_figures.py` 重绘为英文标注。
 编译说明与环境坑见 [`PAPER_论文/README.md`](PAPER_论文/README.md)。
+
+## AI 工具使用声明
+
+按《数维杯全国大学生数学建模挑战赛人工智能工具使用规定（2026 年修订）》要求，本项目声明使用
+**WorkBuddy（底层模型 DeepSeek-V4.1-Flash）**，使用日期 2026-11-20、2026-11-23。
+
+| 交付位置 | 文件 | 对应规定条款 |
+|---|---|---|
+| 论文内（两篇均有） | 附录 C《AI 工具使用情况报告》+ 参考文献 [13] | 第 3、5、6 条 |
+| 独立文件 | [`AI使用说明/AI工具使用情况报告.docx`](AI使用说明/AI工具使用情况报告.docx)（另有 `.md` 源） | 第 6 条（完整版） |
+| 代码文件头 | 全部 17 个脚本的注释块（工具、版本、开发机构、日期） | 第 7 条 |
+| 图表与正文 | 图题与结果处的“（AI 辅助 Rk，队员复算）”标注 | 第 5、8 条 |
+
+报告含逐环节使用记录（R1–R8）、12 项错误更正清单（E1–E12）、提交前待办与签署页。
+生成与更新方式见 [`AI使用说明/README.md`](AI使用说明/README.md)。
 
 ## 目录
 
@@ -44,6 +59,7 @@
 | `Q4_扰动重调度/` | 93 扰动情景 × 2 策略；状态推进式重调度 + 安全兜底 |
 | `FINAL_汇总/` | 最终答案、方案选用理由（四维打分）、方法对比总表、跨题一致性自检 |
 | `PAPER_论文/` | 中文与英文论文（LaTeX 源 + 编译后 PDF）、文献核验记录、英文版插图重绘脚本 |
+| `AI使用说明/` | AI 使用情况报告（md/docx/pdf）、论文附录源、注释块与附录插入脚本 |
 
 每个小题目录统一包含 `README.md`（题意/模型/结果/对比/验证）、`code/`（可独立重跑）、
 `output/`（JSON/CSV 结果）、`figures/`（PNG 图）。

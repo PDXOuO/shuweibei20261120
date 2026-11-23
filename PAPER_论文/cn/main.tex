@@ -21,6 +21,7 @@
   stringstyle=\color{red!55!black}}
 \usepackage{xcolor}
 \usepackage{array}
+\usepackage{longtable}
 
 \usepackage[numbers,sort&compress]{natbib}
 \bibliographystyle{gbt7714-numeric}
@@ -884,6 +885,8 @@ t_{\mathrm{last}}=\tau^{\mathrm{T1}}_{\mathrm{start}}+5+t_{\mathrm{gim}}+t_{\mat
 % ============================================================
 \bibliography{references}
 
+% [AI-REF-13] AI 工具条目，竞赛规定第 5 条，勿删
+\noindent [13] WorkBuddy，DeepSeek-V4.1-Flash，深度求索（DeepSeek），2026-11-20 至 2026-11-23.
 % ============================================================
 \newpage
 \section*{附录}
@@ -957,5 +960,69 @@ for pair in combinations(ALERTS, 2):          # 3 pairs, reuse two alerts
                     if t.last < best[0]:
                         best = (t.last, (assign, stations))
 \end{lstlisting}
+
+% ---------------------------------------------------------------- 附录 C
+% AI 工具使用情况报告（依据《数维杯人工智能工具使用规定（2026 年修订）》第 3、5、6 条）
+% 由 AI使用说明/code/insert_appendix.py 插入/更新 main.tex
+\subsection*{附录 C\quad AI 工具使用情况报告}
+
+{\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.06}
+\noindent\textbf{C.1\quad 声明}
+
+本参赛队使用了人工智能（AI）工具，用于信息检索、代码实现、图表绘制、语言润色与排版等辅助性工作；模型假设的取舍、算法选择、结果解读与结论判断由队员独立完成。凡 AI 生成的代码、公式、数据与文字，均已由队员逐项核对、复算与改写，核验中被判定为错误、口径不当或无法查证的内容已删除或更正（见 C.3）。所用工具按竞赛规定第 5 条列入参考文献 [13]，完整记录见支撑材料。
+
+\vspace{4pt}
+\noindent\textbf{C.2\quad 逐环节使用记录}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.045\linewidth}
+                 >{\raggedright\arraybackslash}p{0.125\linewidth}
+                 >{\raggedright\arraybackslash}p{0.27\linewidth}
+                 >{\raggedright\arraybackslash}p{0.30\linewidth}
+                 >{\raggedright\arraybackslash}p{0.175\linewidth}@{}}
+\toprule
+编号 & 使用环节 & 关键提示词（摘要） & AI 输出要点 & 采纳与修改 \\
+\midrule
+\endfirsthead
+\toprule
+编号 & 使用环节 & 关键提示词（摘要） & AI 输出要点 & 采纳与修改 \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+R1 & 题目解析与路线设计 & “梳理全部小题及要求，按小题建同名文件夹，逐题分析数据、约束与指标” & 拆为 5 个子任务；约束清单；评价指标定义（位置误差 RMS）；目录结构 & 全部采纳；指标定义经队员确认 \\
+R2 & 共享几何与运动学模型 & “各小题口径统一，供复用” & 可通行域、视线遮挡 slab 判定、可见性图最短路、云台转向与时间轴迭代 & 采纳框架；2 处口径错误已改正（E1、E2） \\
+R3 & 模型独立交叉验证 & “用与主实现不同的路径验证，避免自证” & 5 项校验：2 万点可通行域、1800 组遮挡、穿墙采样、云台手算、时间轴手算 & 采纳；5 项全通过后进入分题求解 \\
+R4 & 五个子问题求解 & “可尝试多种解法，逐一记录假设、优缺点、精度、效率与稳定性” & Q1 解析下界＋弧枚举；Q2(1) 枚举＋差分进化；Q2(2) 结构枚举；Q3 解析＋200 万次蒙特卡洛；Q4 情景重调度 & 采纳结果；9 处缺陷已修正（E3--E9、E11） \\
+R5 & 图表绘制 & “图要能看清，标注不要压住数据” & 12 张图：可观测域、最优弧、甘特图、测站布局、误差圆、灵敏度、情景散点 & 采纳；11 次版式调整（图例遮挡、标注越界） \\
+R6 & 跨题汇总与方案比较 & “按题目符合度、结果质量、效率、稳定性选最优方案并汇总” & 四维打分表；11 条实现的方法对比；跨题一致性自检 5 条 & 采纳；汇总脚本只读分题结果，不重算 \\
+R7 & 论文撰写与文献核验 & “各生成一篇中文和英文的论文” & 中文国赛结构 25 页、英文 MCM 结构 24 页；12 条文献经 Crossref 核验 & 采纳；3 条 DOI 错误、2 条元数据不全已更正；英文插图全部重绘 \\
+R8 & 归档与本报告 & “按 AI 使用规定出一份说明” & 本附录、独立报告、代码文件头注释块、文献 [13] & 采纳；工具信息与日期经队员核对 \\
+\end{longtable}
+
+\vspace{3pt}
+\noindent\textbf{C.3\quad 核验与更正记录（规定第 4 条）}
+
+下列内容在核验中被判定为错误或口径不当，均已更正，无一保留在最终成果中：
+\begin{itemize}[leftmargin=1.6em]
+  \item \textbf{E1} 最短路邻接矩阵的不连通边被置 0，V1 至中心算得 9.06 m（真值约 53 m）$\rightarrow$ 改置 $\infty$。
+  \item \textbf{E2} 可通行域用外扩 1.5 m 后的矩形再算点距，等价于要求 3 m 净距，2 万点中误判 935 点 $\rightarrow$ 改用建筑原始轮廓计算欧氏距离。
+  \item \textbf{E3} 8 邻域栅格路径系统性高估约 8\% $\rightarrow$ 改为回溯折线并弦化，另补 0.005 m 采样无穿墙点审查。
+  \item \textbf{E4--E6} 问题 1 弧段因浮点抖动碎成多段；问题 2(1) 的平局裁决被差分进化覆盖、局部精修无交会角守卫而生成 $\gamma=2^\circ$ 的病态测站 $\rightarrow$ 加 $10^{-6}$ 容差与环形扫描，裁决阈值改 $10^{-4}$ 并加 $\gamma\ge15^\circ$ 守卫。
+  \item \textbf{E7--E9} 问题 2(2) 交会角因度与弧度二次换算算得 $-812^\circ$；问题 4 缓存以对象标识为键致取到错误矩阵、已完成告警仍进入仿真、仅配 1 车的告警被计为完成、汇总统计用全局比较 $\rightarrow$ 逐项改正后 93 个情景才出现真实差异。
+  \item \textbf{E10--E12} 3 条文献 DOI 检索命中错误条目、2 条元数据不全 $\rightarrow$ 逐条回查 Crossref 后更正或删除；本机 \TeX{} 环境缺宏包与引用样式问题 $\rightarrow$ 更换宏包并加载 \texttt{natbib}。
+\end{itemize}
+
+\vspace{3pt}
+\noindent\textbf{C.4\quad 代码与图表标注（规定第 7、8 条）}
+
+全部求解脚本与共享模块的文件头均含 AI 辅助注释块（工具名称、版本/型号、开发机构、版本发布日期、使用日期、辅助范围、核验方式）；正文各图的图题末尾标注“（AI 辅助 R$k$，队员复算）”，$k$ 对应 C.2 的环节编号。
+
+\vspace{3pt}
+\noindent\textbf{C.5\quad 参考文献条目}
+
+\noindent [13] WorkBuddy，DeepSeek-V4.1-Flash，深度求索（DeepSeek），2026-11-20 至 2026-11-23.
+\par}
 
 \end{document}

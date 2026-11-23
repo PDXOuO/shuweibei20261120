@@ -1,0 +1,62 @@
+% ---------------------------------------------------------------- AI report
+% AI tool usage report, per Art. 3/5/6 of the 2026 ShuWei Cup AI regulation.
+% Inserted / updated by AI使用说明/code/insert_appendix.py
+\section{AI Tool Usage Report}
+
+{\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.03}
+
+\noindent\textbf{Declaration.}
+This team used artificial intelligence (AI) tools in this competition for auxiliary work: information retrieval, code implementation, figure plotting, language polishing and typesetting. The choice of modelling assumptions, the selection of algorithms, the interpretation of results and all conclusions were made by the team members. Every item produced with AI assistance -- code, formulas, data and text -- was checked, recomputed and rewritten by the team; anything found to be wrong, ill-posed or unverifiable was corrected or deleted (see C.3). The tool is listed as item [13]; the full record is in the supporting material.
+
+\vspace{4pt}
+\noindent\textbf{C.1\quad Record by stage}
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.04\linewidth}
+                 >{\raggedright\arraybackslash}p{0.125\linewidth}
+                 >{\raggedright\arraybackslash}p{0.26\linewidth}
+                 >{\raggedright\arraybackslash}p{0.30\linewidth}
+                 >{\raggedright\arraybackslash}p{0.17\linewidth}@{}}
+\toprule
+No. & Stage & Key prompt (abridged) & Main output & Adopted / revised \\
+\midrule
+\endfirsthead
+\toprule
+No. & Stage & Key prompt (abridged) & Main output & Adopted / revised \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+R1 & Problem parsing and route & ``List every sub-problem and its requirements; one folder per sub-problem; analyse data, constraints and metrics'' & Five tasks; constraint checklists; metric definition (position-error RMS); folder layout & Adopted as is; metric confirmed by the team \\
+R2 & Shared geometry and kinematics & ``One consistent set of conventions, reused by all tasks'' & Free space, slab line-of-sight test, visibility-graph shortest path, gimbal and timeline iteration & Framework adopted; 2 convention errors fixed (E1, E2) \\
+R3 & Independent cross-validation & ``Validate along a path different from the main implementation'' & Five checks: 20\,000-point free space, 1\,800 occlusion cases, wall-crossing hunt, gimbal hand cases, timeline hand chain & Adopted; all five passed before any sub-problem was solved \\
+R4 & Solving the five sub-problems & ``Try several methods; record assumptions, pros, cons, accuracy, efficiency, stability'' & Q1 analytic bound + arc enumeration; Q2(1) enumeration + differential evolution; Q2(2) structural enumeration; Q3 propagation + 2M Monte Carlo; Q4 rescheduling & Results adopted; 9 defects fixed (E3--E9, E11) \\
+R5 & Figures & ``Figures must be legible; labels must not cover data'' & Twelve figures: observable region, optimal arc, Gantt chart, layout, error circle, sensitivity, scatter & Adopted; 11 layout revisions \\
+R6 & Cross-problem summary & ``Choose the best scheme on fidelity, quality, efficiency, stability and summarise'' & Four-axis scoring, 11-implementation comparison, 5 consistency checks & Adopted; the summary script reads results and never recomputes \\
+R7 & Papers and references & ``Produce one Chinese and one English paper'' & CUMCM 25 pp., MCM 24 pp.; 12 references verified against Crossref & Adopted; 3 wrong DOIs and 2 incomplete records fixed; all English figures redrawn \\
+R8 & Archive and this report & ``Produce an AI usage statement from the regulation'' & This section, the stand-alone report, code header blocks, item [13] & Adopted; tool metadata checked by the team \\
+\end{longtable}
+
+\vspace{3pt}
+\noindent\textbf{C.2\quad Code and figure annotations (Art. 7, 8)}
+
+Every solver script and the shared module starts with a comment block giving the tool name, version, developer, release date, dates of use, scope of assistance and the verification method. Every figure caption ends with ``(AI-assisted, stage R$k$; recomputed by the team)'', where $k$ is the stage numbering above.
+
+\vspace{3pt}
+\noindent\textbf{C.3\quad Verification and corrections (Art. 4)}
+
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{E1} Non-connected edges of the shortest-path matrix were initialised to $0$, so Dijkstra reported 9.06 m for a route of about 53 m $\rightarrow$ set to $\infty$.
+  \item \textbf{E2} Free space was tested against the 1.5 m-inflated rectangles, which silently demanded a 3 m clearance and misclassified 935 of 20\,000 points $\rightarrow$ recomputed against the raw building outlines.
+  \item \textbf{E3} The 8-neighbour grid path overestimated length by about 8\% $\rightarrow$ replaced by a backtracked polyline with string pulling, plus a 0.005 m sampling audit for wall crossing.
+  \item \textbf{E4--E6} The feasible arc fragmented under floating-point jitter; in Q2(1) the tie-break rule was overridden by the metaheuristic, and local refinement produced an ill-conditioned $\gamma=2^\circ$ station $\rightarrow$ added a $10^{-6}$ tolerance with circular scanning, a $10^{-4}$ tie-break threshold and a $\gamma\ge15^\circ$ guard.
+  \item \textbf{E7--E9} A double degree-to-radian conversion gave an intersection angle of $-812^\circ$; in Q4 a cache keyed on object identity returned a stale matrix, finished alerts re-entered the simulation, single-vehicle alerts counted as served, and the aggregate compared globally rather than per scenario $\rightarrow$ all corrected; only then did the 93 scenarios separate.
+  \item \textbf{E10--E12} Three reference DOIs resolved to unrelated papers and two records were incomplete $\rightarrow$ re-queried and corrected or deleted; missing \TeX{} packages and a citation-style mismatch $\rightarrow$ packages replaced and \texttt{natbib} loaded.
+\end{itemize}
+
+\vspace{3pt}
+\noindent\textbf{C.4\quad Reference entry}
+
+\noindent [13] WorkBuddy, DeepSeek-V4.1-Flash, DeepSeek, 2026-11-20 to 2026-11-23.
+\par}
